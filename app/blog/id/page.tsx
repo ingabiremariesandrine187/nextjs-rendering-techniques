@@ -1,7 +1,7 @@
 import {getBlogPost,getBlogPosts} from '../../lib/utils';
 import {BlogPost} from '../../types';
 import {notFound} from  'next/navigation';
-import {Calendar,user,tag} from 'lucide-react';
+import {Calendar,User,Tag} from 'lucide-react';
 import Link from 'next/link';
 
 interface BlogDetailProps{
@@ -71,7 +71,7 @@ export default async function BlogDetail({params}:BlogDetailProps){
         <p className="text-blue-700 dark:text-blue-300">
           This page uses Incremental Static Regeneration. It was statically generated at build time 
           but can be regenerated in the background when requested. Perfect for content that updates 
-          periodically but doesn't need real-time data.
+          periodically but do not need real-time data.
         </p>
       </div>
     </article>

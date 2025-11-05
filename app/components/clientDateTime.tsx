@@ -1,7 +1,7 @@
 'use client';
 import {useState,useEffect}  from 'react';
-exprt default function ClientDateTime() {
-const [curreentTime,setCurrentTime] = useState(new Date());
+export default function ClientDateTime() {
+const [currentTime,setCurrentTime] = useState(new Date());
 useEffect(() => {
     const timer = setInterval(() => {
         setCurrentTime(new Date());

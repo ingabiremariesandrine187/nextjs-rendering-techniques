@@ -7,7 +7,7 @@ interface BlogSearchProps {
     posts:BlogPost[];
     onSearchResults:(results:BlogPost[]) => void 
 }
-export default function BlogSearch({posts,onSearchResults}:BlogSeacrhProps){
+export default function BlogSearch({posts,onSearchResults}:BlogSearchProps){
  const [query, setQuery] = useState('');
 
   const handleSearch = (searchQuery: string) => {
