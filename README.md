@@ -1,10 +1,10 @@
 # Next.js Rendering Techniques - Professional Blog
 
-🚀 **Live Demo**: [https://nextjs-rendering-techniques-ltsv.vercel.app/](https://nextjs-rendering-techniques-ltsv.vercel.app/)
+**Live Demo**: [https://nextjs-rendering-techniques-ltsv.vercel.app/](https://nextjs-rendering-techniques-ltsv.vercel.app/)
 
 A professional blog application built with Next.js 14, demonstrating various rendering techniques and modern web development practices.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Features](#features)
 - [Rendering Techniques](#rendering-techniques)
 - [Tech Stack](#tech-stack)
@@ -13,18 +13,18 @@ A professional blog application built with Next.js 14, demonstrating various ren
 - [Usage](#usage)
 - [Deployment](#deployment)
 
-## ✨ Features
+## Features
 
-- 🎨 **Multiple Rendering Techniques**: CSR, SSR, SSG, and ISR
-- 📱 **Fully Responsive Design**: Mobile-first approach with breakpoints
-- 🌙 **Dark/Light Mode**: Theme toggle with localStorage persistence
-- 🔍 **Client-Side Search**: Real-time blog post filtering
-- 🏷️ **Category Filtering**: Organize posts by Tech, Lifestyle, Education, etc.
-- 🎯 **Modern UI**: Built with Tailwind CSS and Lucide icons
-- 📱 **Mobile Navigation**: Hamburger menu for mobile devices
-- ⚡ **Performance Optimized**: Static generation and ISR for fast loading
+- **Multiple Rendering Techniques**: CSR, SSR, SSG, and ISR
+- **Fully Responsive Design**: Mobile-first approach with breakpoints
+- **Dark/Light Mode**: Theme toggle with localStorage persistence
+- **Client-Side Search**: Real-time blog post filtering
+- **Category Filtering**: Organize posts by Tech, Lifestyle, Education, etc.
+- **Modern UI**: Built with Tailwind CSS and Lucide icons
+- **Mobile Navigation**: Hamburger menu for mobile devices
+- **Performance Optimized**: Static generation and ISR for fast loading
 
-## 🔧 Rendering Techniques Used
+## Rendering Techniques Used
 
 ### 1. Client-Side Rendering (CSR)
 - **Location**: Home page - Live time component
@@ -50,7 +50,7 @@ A professional blog application built with Next.js 14, demonstrating various ren
 - **Purpose**: Static generation with background revalidation
 - **Revalidation**: Every hour (`export const revalidate = 3600`)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
 - **Styling**: Tailwind CSS
@@ -59,7 +59,7 @@ A professional blog application built with Next.js 14, demonstrating various ren
 - **Deployment**: Vercel
 - **API**: JSONPlaceholder (for demo data)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 app/
@@ -87,7 +87,7 @@ app/
 └── page.tsx                  # Home page (CSR demo)
 ```
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -108,7 +108,7 @@ app/
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📖 Usage
+## Usage
 
 ### Development Commands
 
@@ -136,7 +136,7 @@ npm run type-check
 6. **Theme Toggle**: Switch between dark and light modes
 7. **Mobile**: Test responsive design on different screen sizes
 
-## 🌐 Deployment
+## Deployment
 
 **Live Site**: [https://nextjs-rendering-techniques-ltsv.vercel.app/](https://nextjs-rendering-techniques-ltsv.vercel.app/)
 
@@ -153,28 +153,28 @@ npm run type-check
    # Add any environment variables here
    ```
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - **Mobile**: < 640px (Single column, hamburger menu)
 - **Tablet**: 640px - 1024px (Two columns)
 - **Desktop**: > 1024px (Full layout with sidebar)
 
-## 🎨 Theme System
+## Theme System
 
 - **Light Mode**: Clean white background with blue accents
 - **Dark Mode**: Dark gray background with blue accents
 - **Persistence**: Theme choice saved in localStorage
 - **System Detection**: Respects OS preference on first visit
 
-## 📊 Performance Features
+## Performance Features
 
-- ✅ Static generation for blog posts
-- ✅ ISR for dynamic content with caching
-- ✅ Optimized images and fonts
-- ✅ Minimal JavaScript bundles
-- ✅ Fast page transitions
+- Static generation for blog posts
+- ISR for dynamic content with caching
+- Optimized images and fonts
+- Minimal JavaScript bundles
+- Fast page transitions
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -182,11 +182,11 @@ npm run type-check
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is for educational purposes as part of a Next.js assignment.
 
 ---
 
-**Built with ❤️ using Next.js 14 and modern web technologies**
+**Built with Next.js 14 and modern web technologies**
 
