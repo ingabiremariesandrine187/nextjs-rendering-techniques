@@ -55,6 +55,60 @@ export default async function About (){
             </div>
           </div>
 
+          {/* Project Info */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800 mb-6">
+            <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+              Next.js Rendering Techniques Project
+            </h3>
+            <p className="text-blue-700 dark:text-blue-300 text-sm mb-4">
+              This project demonstrates all major Next.js rendering techniques including CSR, SSR, SSG, and ISR.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-blue-800 dark:text-blue-200">GitHub Repository:</span>
+                <a 
+                  href="https://github.com/ingabiremariesandrine187/nextjs-rendering-techniques" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
+                >
+                  View Source Code
+                </a>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-blue-800 dark:text-blue-200">Live Demo:</span>
+                <a 
+                  href="https://nextjs-rendering-techniques-chi.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
+                >
+                  Visit Live Site
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Rendering Techniques */}
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+              <h4 className="font-semibold text-green-800 dark:text-green-200 mb-2">SSG - Blog Page</h4>
+              <p className="text-green-700 dark:text-green-300 text-sm">Static Site Generation for optimal performance</p>
+            </div>
+            <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+              <h4 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">ISR - Blog Details</h4>
+              <p className="text-purple-700 dark:text-purple-300 text-sm">Incremental Static Regeneration with 1h revalidation</p>
+            </div>
+            <div className="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
+              <h4 className="font-semibold text-orange-800 dark:text-orange-200 mb-2">CSR - Home Page</h4>
+              <p className="text-orange-700 dark:text-orange-300 text-sm">Client-Side Rendering with real-time clock</p>
+            </div>
+            <div className="p-4 bg-primary-50 dark:bg-primary-900/20 rounded-lg border border-primary-200 dark:border-primary-800">
+              <h4 className="font-semibold text-primary-800 dark:text-primary-200 mb-2">SSR - About Page</h4>
+              <p className="text-primary-700 dark:text-primary-300 text-sm">Server-Side Rendering for fresh data on each request</p>
+            </div>
+          </div>
+
           <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-6 border border-primary-200 dark:border-primary-800">
             <h3 className="text-lg font-semibold text-primary-800 dark:text-primary-200 mb-2">
               Server-Side Rendering (SSR)
