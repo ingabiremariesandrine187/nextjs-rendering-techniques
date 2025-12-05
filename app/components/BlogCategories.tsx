@@ -4,13 +4,12 @@ import BlogSearch from '../components/BlogSearch';
 import {BlogPost} from '../types'
 
 const categories = [
-    {id: 1,name:'all',slug:'all'},
-    {id:2,name:'Tech',slug:'tech'},
-    {id:3,name:'lifestyle',slug:'lifestyle'},
-     {id:4,name:'education',slug:'education'},
-      {id:3,name:'Business',slug:'business'},
-       {id:3,name:'Health',slug:'health'},
-       
+    {id: 1, name: 'All', slug: 'all'},
+    {id: 2, name: 'Tech', slug: 'tech'},
+    {id: 3, name: 'Lifestyle', slug: 'lifestyle'},
+    {id: 4, name: 'Education', slug: 'education'},
+    {id: 5, name: 'Business', slug: 'business'},
+    {id: 6, name: 'Health', slug: 'health'},
 ];
 
 interface BlogCategoriesProps {

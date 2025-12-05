@@ -1,8 +1,3 @@
-// 
-
-
-
-
 'use client';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
@@ -18,11 +13,15 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
-  //  Initialize theme WITHOUT setState inside useEffect
+  // Initialize theme WITHOUT setState inside useEffect
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme') as Theme | null;
-      if (savedTheme) return savedTheme;
+      try {
+        const savedTheme = localStorage.getItem('theme') as Theme | null;
+        if (savedTheme) return savedTheme;
+      } catch (error) {
+        console.warn('Failed to read theme from localStorage:', error);
+      }
 
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         return 'dark';
@@ -37,7 +36,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       const root = window.document.documentElement;
       root.classList.remove('light', 'dark');
       root.classList.add(theme);
-      localStorage.setItem('theme', theme);
+      
+      try {
+        localStorage.setItem('theme', theme);
+      } catch (error) {
+        console.warn('Failed to save theme to localStorage:', error);
+      }
     }
   }, [theme]);
 
