@@ -29,7 +29,8 @@ export function BlogCategories({
     setActiveCategory(categorySlug);
     onCategoryChange?.(categorySlug);
   };
-   const handleSearchResults = (results: BlogPost[]) => {
+
+  const handleSearchResults = (results: BlogPost[]) => {
     onSearchResults?.(results);
   };
   return(
