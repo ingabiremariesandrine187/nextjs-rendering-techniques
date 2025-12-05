@@ -10,9 +10,15 @@ interface BlogDetailProps{
     };
 }
 
-// Generate static params for all blog posts
+// Generate static params for ISR
+export async function generateStaticParams() {
+  return Array.from({ length: 10 }, (_, i) => ({
+    id: (i + 1).toString(),
+  }));
+}
+
 export default async function BlogDetail({params}:BlogDetailProps){
-    const post:BlogPost =await getBlogPost(params.id);
+    const post = await getBlogPost(params.id);
     if(!post){
         notFound();
     }

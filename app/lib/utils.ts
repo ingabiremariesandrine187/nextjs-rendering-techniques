@@ -36,20 +36,31 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   }));
 }
 
-export async function getBlogPost(id: string): Promise<BlogPost> {
-  // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-  if (!response.ok) {
-    throw new Error('Failed to fetch blog post');
+export async function getBlogPost(id: string): Promise<BlogPost | null> {
+  try {
+    // Validate ID
+    const postId = parseInt(id);
+    if (isNaN(postId) || postId < 1 || postId > 100) {
+      return null;
+    }
+
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    if (!response.ok) {
+      return null;
+    }
+    
+    const post = await response.json();
+    const categories = ['Tech', 'Lifestyle', 'Education', 'Business', 'Health'];
+    
+    return {
+      ...post,
+      category: categories[parseInt(id) % categories.length]
+    };
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+    return null;
   }
-  
-  const post = await response.json();
-  const categories = ['Tech', 'Lifestyle', 'Education', 'Business', 'Health'];
-  
-  return {
-    ...post,
-    category: categories[parseInt(id) % categories.length]
-  };
 }
