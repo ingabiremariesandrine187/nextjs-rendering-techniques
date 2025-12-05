@@ -24,18 +24,18 @@ export default async function BlogDetail({params}:BlogDetailProps){
     }
 
     return(
-<article className="max-w-4xl mx-auto">
+<article className="max-w-4xl mx-auto px-4">
       {/* Back Button */}
       <Link 
         href="/blog"
-        className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 mb-8 transition-colors"
+        className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 mb-6 md:mb-8 transition-colors"
       >
         ← Back to Blog
       </Link>
 
       {/* Article Header */}
-      <header className="mb-8">
-        <div className="flex items-center space-x-4 mb-4">
+      <header className="mb-6 md:mb-8">
+        <div className="flex flex-wrap items-center gap-2 md:gap-4 mb-4">
           <span className="inline-flex items-center px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-sm font-medium rounded-full">
             <Tag className="w-3 h-3 mr-1" />
             {post.category}
@@ -50,7 +50,7 @@ export default async function BlogDetail({params}:BlogDetailProps){
           </div>
         </div>
         
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-4">
           {post.title}
         </h1>
       </header>

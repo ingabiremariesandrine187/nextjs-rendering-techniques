@@ -38,6 +38,8 @@
   transition: all 0.2s;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 140px;
 }
 
 .btn-primary:hover {
@@ -56,6 +58,8 @@
   transition: all 0.2s;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 140px;
 }
 
 .btn-secondary:hover {
@@ -71,6 +75,58 @@
 .dark .btn-secondary:hover {
   background: #60a5fa;
   color: #1f2937;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .btn-primary, .btn-secondary {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Mobile menu animations */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+/* Prevent body scroll when mobile menu is open */
+.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Responsive text sizes */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.875rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
 }
 
 body {

@@ -9,17 +9,17 @@ export default async function Blog() {
 
   return (
     <div>
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+      <div className="text-center mb-8 md:mb-12 px-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
           Our Blog
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Discover insightful articles about technology, lifestyle, education, and more.
         </p>
       </div>
 
       {/* Blog Posts Grid */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {posts.map((post) => (
           <article key={post.id} className="card group hover:shadow-xl transition-all duration-300">
             <div className="flex justify-between items-start mb-4">

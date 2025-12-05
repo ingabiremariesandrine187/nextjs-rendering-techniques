@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import { Inter } from 'next/font/google'; 
 import './globals.css'
 import {ThemeProvider,ThemeToggle} from './components/ThemeToggle'
+import MobileNav from './components/MobileNav';
 import Link from 'next/link';
 import {Home,User,BookOpen} from 'lucide-react';
 
@@ -24,7 +25,7 @@ export default function RootLayout({
           <div className="min-h-screen bg-gradient-to-br from-primary-50 to-purple-100 dark:from-gray-900 dark:to-gray-800">
             {/* Header */}
             <header className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
-              <div className="container mx-auto px-4 py-4">
+              <div className="container mx-auto px-4 py-4 relative">
                 <div className="flex items-center justify-between">
                   {/* Logo */}
                   <Link href="/" className="flex items-center space-x-2">
@@ -37,7 +38,7 @@ export default function RootLayout({
                   </Link>
 
                   {/* Navigation */}
-                  <nav className="flex items-center space-x-8">
+                  <nav className="hidden md:flex items-center space-x-8">
                     <Link 
                       href="/" 
                       className="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -61,6 +62,9 @@ export default function RootLayout({
                     </Link>
                     <ThemeToggle />
                   </nav>
+
+                  {/* Mobile Navigation */}
+                  <MobileNav />
                 </div>
               </div>
             </header>

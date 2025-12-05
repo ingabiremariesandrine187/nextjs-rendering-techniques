@@ -34,22 +34,22 @@ export function BlogCategories({
     onSearchResults?.(results);
   };
   return(
-     <div className="space-y-6">
+     <div className="space-y-4 lg:space-y-6">
       {/* Search */}
       <div className="card">
-        <h3 className="font-semibold text-gray-800 dark:text-white mb-4">Search Posts</h3>
+        <h3 className="font-semibold text-gray-800 dark:text-white mb-3 lg:mb-4 text-sm lg:text-base">Search Posts</h3>
         <BlogSearch posts={posts} onSearchResults={handleSearchResults} />
       </div>
 
       {/* Categories */}
       <div className="card">
-        <h3 className="font-semibold text-gray-800 dark:text-white mb-4">Categories</h3>
-        <div className="space-y-2">
+        <h3 className="font-semibold text-gray-800 dark:text-white mb-3 lg:mb-4 text-sm lg:text-base">Categories</h3>
+        <div className="grid grid-cols-2 lg:grid-cols-1 gap-2 lg:space-y-2 lg:block">
           {categories.map(category => (
             <button
               key={category.id}
               onClick={() => handleCategoryClick(category.slug)}
-              className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${
+              className={`w-full text-left px-3 py-2 rounded-lg transition-colors text-sm lg:text-base ${
                 activeCategory === category.slug
                   ? 'bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200'
                   : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
@@ -61,8 +61,8 @@ export function BlogCategories({
         </div>
       </div>
 
-      {/* Info Card */}
-      <div className="card bg-gradient-to-r from-primary-500 to-purple-500 text-white">
+      {/* Info Card - Hidden on mobile */}
+      <div className="hidden lg:block card bg-gradient-to-r from-primary-500 to-purple-500 text-white">
         <h3 className="font-semibold mb-2">Static Site Generation</h3>
         <p className="text-sm opacity-90">
           This blog page uses Static Site Generation (SSG) for optimal performance and SEO.

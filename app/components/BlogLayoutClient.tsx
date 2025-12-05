@@ -31,16 +31,16 @@ export default function BlogLayoutClient({ children }: BlogLayoutClientProps) {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8">
+    <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
       {/* Sidebar - Only visible in blog section */}
-      <aside className="lg:w-64 flex-shrink-0">
-        <div className="sticky top-24">
+      <aside className="lg:w-64 flex-shrink-0 order-2 lg:order-1">
+        <div className="lg:sticky lg:top-24">
           <BlogCategories posts={posts} />
         </div>
       </aside>
       
       {/* Main Content */}
-      <main className="flex-1">
+      <main className="flex-1 order-1 lg:order-2">
         {children}
       </main>
     </div>
