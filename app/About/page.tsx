@@ -78,7 +78,7 @@ export default async function About (){
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-blue-800 dark:text-blue-200">Live Demo:</span>
                 <a 
-                  href="https://nextjs-rendering-techniques-chi.vercel.app" 
+                  href="https://nextjs-rendering-techniques-ltsv.vercel.app" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
